@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="#" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script> -->
+</head>
+<body>
+    <h1>index page for Python Flask app.</h1>
+    <h2>REST API examples</h2>
+    <ul>
+        <li>
+            http://localhost:8888/
+        </li>
+        <li>
+            http://localhost:8888/home
+        </li>
+        <li>
+            Get query para from url: http://localhost:8888/user/feng1
+        </li>
+        <li>
+            Get query para of a certain type: http://localhost:8888/post/111111
+        </li>
+        <li>
+            POST a Form: http://localhost:8888/submitForm
+        </li>
+        <li>
+            Upload a file to folder uploadedFiles: http://localhost:8888/uploadFile
+        </li>
+        <li>
+            POST a json in body: http://localhost:8888/getJson 
+        </li>
+        <li>
+            Show how to connect to mongodb : http://localhost:8888/connectMongo
+        </li>
+    </ul>
+    <h2>Service APIs:</h2>
+    <h3>All support POST method; Some support DELETE; Route SaveFile supports GET which display a page to upload files.</h3>
+    <h3>fileType is : data / model</h3>
+    <h3>isUsingCloud is : True / False</h3>
+    <ul>
+        <li>
+            http://localhost:8888/app/createApp
+            <br>#Json payload must include : appName appDesc username
+        </li>
+        <li>
+            http://localhost:8888/app/updateApp
+            <br>#Json payload must include : appName appDesc username
+        </li>
+        <li>
+            http://localhost:8888/app/deleteApp
+            <br>#Json payload must include : appName username
+        </li>
+        <li>
+            http://localhost:8888/app/deleteAllAppForUser
+            <br>#Json payload must include : username
+        </li>
+        <li>
+            http://localhost:8888/file/saveFile
+            <br>Opens a form. check description for fileType, isUsingCloud
+        </li>
+        <li>
+            http://localhost:8888/file/delFile
+            <br>#Json payload must include : username appName fileType fileName isUsingCloud
+        </li>
+        <li>
+            http://localhost:8888/file/delAllFileForApp
+            <br>#Json payload must include : username appName isUsingCloud
+        </li>
+        <li>
+            http://localhost:8888/file/getFile
+            <br>#Json payload must include : username appName fileType fileName isUsingCloud
+            <br>not working for pdf file as there is decoding issue; can not make this API work for all files.
+        </li>
+        <li>
+            http://localhost:8888/file/getFileList
+            <br>#Json payload must include : username appName
+        </li>
+        
+    </ul>
+</body>
+</html>
